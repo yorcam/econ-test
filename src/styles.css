@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+footer{background-color: #F8F8F8;}
+nav{background-color: #F8F8F8;box-shadow: none;height: 150px;}
+nav ul li a{color: #363636;}
+nav .nav-wrapper{padding-top: 2%;}
+.input-field .prefix{right: .5rem;}
+.card h6{
+    color: #0044A6;
+}
+.card .details{
+    margin: 10px;
+}
+.card .details a{
+    background-color: #0044A6;
+    margin-top:10px;
+}
+.w-100{
+    width: 100%;
+}

@@ -1,0 +1,38 @@
+<div class="row center-align hero-name">
+    <h1>{{ hero.name }}</h1>
+</div>
+<div class="row hero">
+    <div class="col s4 picture">
+        <img [src]="hero.images.lg" width="100%">
+    </div>
+    <div class="col s8 details">
+        <div class="col s6 stats">
+            <h5>Powerstats</h5>
+            <div class="stats" *ngFor="let stats of hero.powerstats | keyvalue; let i = index">
+                <span> {{ stats.key | titlecase }}: <b> {{ stats.value }} </b> </span>
+            </div>
+        </div>
+        <div class="col s6 appearance">
+            <h5>Appearance</h5>
+            <div class="stats" *ngFor="let stats of hero.appearance | keyvalue; let i = index">
+                <span> {{ stats.key | titlecase }}: <b> {{ stats.value }} </b> </span>
+            </div>
+        </div>
+        <div class="col s12 biography">
+            <h5>Biography</h5>
+            <div class="stats" *ngFor="let stats of hero.biography | keyvalue; let i = index">
+                <span> {{ stats.key | titlecase }}: <b> {{ stats.value }} </b> </span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col s12 biography">
+        <h5>Other information</h5>
+        <div class="stats" *ngFor="let stats of hero.work | keyvalue; let i = index">
+            <span> {{ stats.key | titlecase }}: <b> {{ stats.value }} </b> </span>
+        </div>
+        <div class="stats" *ngFor="let stats of hero.connections | keyvalue; let i = index">
+            <span> {{ stats.key | titlecase }}: <b> {{ stats.value }} </b> </span>
+        </div>
+    </div>
+</div>

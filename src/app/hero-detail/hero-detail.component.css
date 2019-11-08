@@ -1,0 +1,12 @@
+.hero-name{
+    border-bottom: 2px solid #00000029;
+}
+.hero-name h1{
+    color: #0044A6;
+    font-weight: 900;
+}
+.hero .details h5,
+.biography h5{
+    color: #363636;
+    font-weight: 600;
+}

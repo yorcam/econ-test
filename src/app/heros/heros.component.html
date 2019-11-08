@@ -1,0 +1,26 @@
+<div class="row">
+    <h1 class="center-align">{{title}}</h1>
+</div>
+<div class="row">
+    <div class="input-field col s8 offset-s2">
+        <i class="material-icons prefix">search</i>
+        <input id="search" name="search" type="text" class="validate" [(ngModel)]="search">
+        <label for="search">Search hero</label>
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let hero of heros | filter:search" class="col s3">
+        <div class="card">
+            <img [src]="hero.images.sm" width="100%">
+            <h6 class="center-align">{{ hero.name | uppercase }}</h6>
+            <div class="details">
+                <div class="stats" *ngFor="let stats of hero.powerstats | keyvalue; let i = index">
+                    <span> {{ stats.key | titlecase }}: <b> {{ stats.value }} </b> </span>
+                </div>
+                <span>Gender:  <b>{{ hero.appearance.gender}}</b></span><br>
+                <span>Race: <b>{{ hero.appearance.race}}</b></span>
+                <a [routerLink]="[ '/hero', hero.id ]" class="waves-effect waves-light btn btn-small w-100"><i class="material-icons right">add</i>Details</a>
+            </div>
+        </div>
+    </div>
+</div>
